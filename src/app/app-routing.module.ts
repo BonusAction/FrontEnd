@@ -6,12 +6,11 @@ import { RegisterComponent } from './views/register/register.component';
 import { SheetComponent } from './views/sheet/sheet.component';
 
 const routes: Routes = [
-  {path: '', component: SheetComponent},
-  {path: '/sheet', component: SheetComponent},
-  {path: '/about', component: AboutComponent},
-  {path: '/login', component: LoginComponent},
-  {path: '/register', component: RegisterComponent},
-
+  {path: '', redirectTo: 'sheet', pathMatch: 'full'},
+  {path: 'sheet', component: SheetComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({
